@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-la">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    <title>PROYECTO ENTREGABLE 1</title>
+</head>
+<body>
+    <header class= "header">
+        <div>
+            <a href="../index.html">
+            <h1>Tesla Café</h1>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="cursos.html">CURSOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main__contacto">
+    <!-- FORMULARIO -->
+    
+    <div>
+        <form class="main__contacto__form">
+            <label for="nombre">Ingrese su Nombre</label>
+            <input type="text" placeholder="Nombre" value="" name="nombre">
+            <label for="apellido">Ingrese su Apellido</label>
+            <input type="text" placeholder="Apellido" value="" name="apellido">
+            <fieldset>
+                <legend>Seleccione su provincia</legend>
+                <label for="provincia">Lugar de Residencia</label>
+                    <select name="provincia" id="">
+                        <option value="cordoba">Cordoba</option>
+                        <option value="buenos aires">Buenos Aires</option>
+                        <option value="catamarca">Catamarca</option>ç
+                        <option value="santa fe">Santa Fe</option>
+                    </select>
+            </fieldset>
+            <label for="genero">Ingrese su Genero</label>
+            <input type="radio" name="genero" value="femenino">Femenino
+            <input type="radio" name="genero" value="masculino">Masculino
+            <input type="radio" name="genero" value="n/c">Prefiero no especificarlo 
+            <label for="telefono">Ingrese su Telefono</label>
+            <input type="text" placeholder="Telefono" value="" name="telefono">
+            <label for="emal">Ingrese su E-mail</label>
+            <input type="email" placeholder="E-mail" value="" name="email">
+            <br>
+            <label for="mensaje">Deje su consulta</label>
+            <textarea name="" id="" cols="40" rows="15" placeholder="..." name="mensaje"></textarea>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </div>
+    <div class="main__contacto__maps">
+        <h3>Ubicación</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29917.65064418491!2d-64.19557293566686!3d-31.423656594795652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1645890597131!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__item">
+            <h3>medios de pago</h3>
+            <ul>
+                <li>medio de pago 1</li>
+                <li>medio de pago 2</li>
+                <li>medio de pago 3</li>
+                <li>medio de pago 4</li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <h3>contacto</h3>
+            <ul>
+                <li>correo@mail.com</li>
+                <li>+543516554433</li>
+            </ul>
+        </div>
+        <div class="footer__item">
+            <h3>redes</h3>
+            <ul>
+                <li><a href="https://es-la.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
