@@ -3,40 +3,27 @@
     margin: 0;
     overflow-x:hidden;
 }
-body{
-    background-color:floralwhite;
-    font-family: 'Lexend Exa', sans-serif;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: 
-            "header header header header header"
-            "main main main main main"
-            "footer footer footer footer footer"
-            ;
-}
 
 /*header*/
-
+body{
+    background-color: rgb(226, 226, 226);
+}
 .header {
     height:15vh;
-    background-color:floralwhite;
-    grid-area: header;
-    display:grid;
-    grid-template-columns:1fr;
-    grid-template-areas: 
-            "h1"
-            "nav"
-            ;
-
-
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 .header h1{
-    background-color:floralwhite;
-    color: rgb(10, 9, 8);
-    grid-area: h1;
+    margin: 0;
+    padding: 0;
+    width: 16rem;
+    height: 5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
+    align-items: center;
     text-decoration: none;
+    color: rgb(29, 29, 29);
 }
 .header a{
     text-decoration: none;
@@ -45,8 +32,10 @@ body{
 
 .nav{
     height: auto;
-    background-color:floralwhite;
-    grid-area: nav;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
 }
 .nav ul {
     display: flex;
@@ -54,10 +43,12 @@ body{
     column-gap:5vw;
 }
 .nav ul li {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 .nav ul li a {
-    font-size: 90%;
+    font-size: 100%;
     font-weight: bolder;
     color: rgb(10, 9, 8);
     text-decoration: none;
@@ -69,49 +60,18 @@ body{
 
 /*main inicio*/
 .mainInicio{
-    height: calc(100vh - 15vh);
-    background-color:floralwhite;
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-            "carousel carousel carousel"
-            "carousel carousel carousel"
-            "carousel carousel carousel"
-            "carousel carousel carousel"
-            "carousel carousel carousel"
-            "section section section"
-            ;
+    margin: auto;
+    padding: 0;
+    width: 90vw;
+    height:auto;
 }
 .mainInicio__carousel {
-    height: 65vh;
-    background-image: url(../imagenes/granos-xl.jpg);
-    background-size: cover;
-    grid-area: carousel;
 
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
-.mainInicio__texto{
-    height: 20vh;
-    grid-area: section;
-    background-color:floralwhite;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-.mainInicio__texto section p{
-    height: 15vh;
-    padding: 1vh;
-    width: 90vw;
-    background-color:floralwhite;
-    text-align: center;
-    color: rgb(10, 9, 8);
-    font-weight: bolder;
-    font-size: medium;
-    display: flex;
-    justify-content: center;
-}
+
 /*fin main inicio*/
 
 /*main productos*/
@@ -179,37 +139,43 @@ body{
 
 /*main contacto*/
 .main__contacto{
-    margin: 20px auto;
-    padding-bottom: 50px;
-    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 90vw;
     height: auto;
-    grid-area: main;
-    background-color: rgb(190, 190, 190);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
 }
 
 
 .main__contacto__form{
-    padding: 10px;
-    width: 30vw;
+    width: auto;
     height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    justify-content: space-between;
 }
 
 .main__contacto__maps{
-    padding: 10px;
-    margin: 0 auto;
-    width: 30vw;
-    height: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+iframe{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: flex-start;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
 }
 /* Fin main contacto*/
 
@@ -344,56 +310,80 @@ body{
 /*footer*/
 
 .footer{
-    height: 40vh;
+    width: 100vw;
+    margin: 2rem auto 0;
+    height: 30vh;
     background-color:  rgb(34, 51, 59);
-    grid-area: footer;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     align-content: center;
-    justify-content: space-evenly;
+    align-items: stretch;
+    column-gap: 1rem;
 }
 
 .footer__item{
-    height: 22vh;
-    width: 30vw;
-    background-color:  rgb(34, 51, 59);
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-template-areas: 
-            "footerH3"
-            "footerUl"
-            ;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
 
+    
 }
 .footer__item h3{
-    font-size: 150%;
+    margin: 0;
+    padding: 0;
     font-weight: bolder;
     color:floralwhite;
     text-decoration: underline;
-    grid-area: footerH3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 18rem;
+    height: 8rem;
+}
+
+
+.footer ul{
+    width: 18rem;
+    height: 8rem;
+    list-style: none;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    align-content: center;
 }
 
 .footer ul li{
     color:floralwhite;
+    font-size: large;
     font-weight: lighter;
-    grid-area: footerUl;
-    font-size: 90%;
-
 }
 
 .footer ul li a{
     color:floralwhite;
     font-style: italic;
-    grid-area: footerUl;
-    font-size: 90%;
-
+    font-size: large;
 }
 /* fin footer */
 
+
 /* inicio media 1024px */
 @media screen and (max-width: 1024px) {
+
+
+    .mainInicio__carousel {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
     
     .main__productos{
         height: auto;
@@ -445,16 +435,17 @@ body{
         font-size: 75%;
     }
     
+    .main__contacto__form{
+        margin-bottom: 1rem;
+    }
+    
+
 }
 /* fin media 1024px */
 
 /* inicio media 768px */
 @media screen and (max-width: 768px){
 
-
-.header h1{
-    background-color:floralwhite;
-}
 
 .nav ul {
         display: flex;
@@ -520,42 +511,13 @@ body{
     font-size: 75%;
 }
 
-.main__contacto{
-    margin: 20px auto;
-    width: 80vw;
-    height: auto;
-    grid-area: main;
-    background-color: rgb(190, 190, 190);
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: auto;
-}
 
 
 .main__contacto__form{
-    padding: 10px;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    margin-bottom: 1rem;
 }
 
-.main__contacto__maps{
-    padding: 10px;
-    margin: 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-start;
-}
 
-.main__contacto__maps iframe{
-width: auto;
-}
 
 .main__cursos {
     width: auto;
@@ -627,14 +589,7 @@ width: auto;
 /* inicio media 612px */
 
 @media screen and (max-width: 612px){
-    .mainInicio__carousel{
-        background-image: url(../imagenes/granos-c.jpg);
 
-    }
-    .mainInicio__texto section p{
-        font-size: small;
-    }
-    
     .main__productos{
         width: auto;
         height:auto;
@@ -830,116 +785,93 @@ width: auto;
 
 @media screen and (max-width: 490px){
 
-body{
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-            "header"
-            "main"
-            "footer"
-            ;
-}
-
 .header {
     height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
+.header h1{
+    margin: 0;
+    padding: 0;
+    margin-bottom:1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+.header a{
+    text-decoration: none;
+}
+                    /*NAV*/
 
+.nav{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+}
 .nav ul {
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    row-gap:.5vh;
+    align-content: center;
+    column-gap:1vw;
+}
+.nav ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 .nav ul li a {
-    font-size: 90%;
+    font-size: 100%;
+    font-weight: bolder;
+    color: rgb(10, 9, 8);
+    text-decoration: none;
 }
-
-.mainInicio{
-    height: auto;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas:
-            "carousel"
-            "section"
-            ;
-}
-.mainInicio__carousel {
-    height: 50vh;
-}
-.mainInicio__texto{
-    height: auto;
-
-}
-.mainInicio__texto section p{
-    height:auto;
-}
-
-.main__contacto{
-    margin: 20px auto;
-    width: 80vw;
-    height: auto;
-    grid-area: main;
-    background-color: rgb(190, 190, 190);
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: auto;
-}
-
 
 .main__contacto__form{
-    padding: 10px;
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    margin-bottom: 1rem;
 }
 
-.main__contacto__maps{
-    padding: 0;
-    margin: 30px auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: flex-start;
-}
-
-.main__contacto__maps iframe{
-width: auto;
-
-}
-        
 .footer{
-height: 60vh;
+width: auto;
+height: auto;
 display: flex;
 flex-direction:column-reverse;
 }
         
 .footer__item{
-    height: 15vh;
-    width: 90vw;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: 
-            "footerH3"
-            "footerUl"
-            ;
-    justify-items: center;
+    padding: 1rem;
+    height:auto;
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 .footer__item h3{
+    padding: 1rem;
     height: auto;
-    font-size: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .footer ul li{
-    font-size: 90%;
+    font-size: 100%;
 }
 .footer ul li a{
-    font-size: 90%;
+    font-size: 100%;
 }
 /* fin media 490px */
-    }
+} 
