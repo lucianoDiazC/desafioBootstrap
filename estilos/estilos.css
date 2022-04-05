@@ -909,7 +909,7 @@ iframe{
 
 .footer{
 width: auto;
-height: 60vh;
+height: auto;
 display: flex;
 flex-direction:column-reverse;
 column-gap: 5px;
@@ -923,7 +923,6 @@ column-gap: 5px;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background-color: rgb(21, 22, 22);
 }
 .footer__item h3{
     padding: 0rem;
@@ -933,7 +932,6 @@ column-gap: 5px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: brown;
 }
 .footer ul li{
     margin: 0;
@@ -945,7 +943,6 @@ column-gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: rgb(158, 119, 119);
 
 }
 .footer ul li a{
