@@ -38,6 +38,9 @@ body{
     align-content: center;
 }
 .nav ul {
+    margin: 2rem 0;
+    padding: 0;
+    width: 100%;
     display: flex;
     justify-content:center;
     column-gap:5vw;
@@ -57,6 +60,10 @@ body{
                     /*NAV*/
 
 /*fin header*/
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
 
 /*main inicio*/
 .mainInicio{
@@ -78,62 +85,53 @@ body{
 
 .main__productos{
     width: 90vw;
+    padding: 1rem;
     margin: 0 auto;
-    padding: 5%;
-    height:100vh;
-    background-color:floralwhite;
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 15vh;
-    column-gap: 3vw;
+    height:auto;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }   
 .sectionCard{
-    margin: 0 auto;
-    padding: 45px;
+    margin: 1rem auto;
+    padding: 1rem;
     background-color: rgb(190, 190, 190);
-    width: 80%;
-    display: grid;
-    grid-template-areas: 
-            "titulo titulo"
-            "texto imagen"
-            ;
-    grid-template-columns:repeat(2, 1fr);
-    grid-template-rows: auto;
-    column-gap: 1vw;
-    row-gap: 2vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    align-content: center;
 }
 .sectionCardImage{
-    margin: 0 auto;
-    background-color:rgb(248, 224, 175);
+    background-color:rgb(99, 96, 91);
     width: 150px;
     height: 150px;
     background-image: url(../imagenes/granos-de-cafe.png);
     background-size:50px;
-    grid-area: imagen;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
 }
 .sectionCardH3{
-    font-size: 100%;
-    grid-area: titulo;
+    margin: 1rem;
+    height: 5rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+
 }
 .sectionCardTexto{
-    width: 190px;
+    width: 100%;
     height: auto;
-    background-color: rgb(190, 190, 190);
-    grid-area: texto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
+
+}
+.productosBoton{
+    background-color:rgb(99, 96, 91);
 }
 /* fin main productos */
 
@@ -181,60 +179,52 @@ iframe{
 
 /*main nosotros*/
 .main__nosotros{
-    grid-area: main;
-    height: 100vh;
+    margin: 0 auto;
+    height: 100%;
+    width: 90vw;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
 }
 .main__nosotros__card{
     margin: 0 auto;
-    padding: 30px;
-    width:80vw;
-    height: 40vh;
-    display: grid;
-    grid-template-areas: 
-    "texto imagen"
-    "texto imagen"
-    ;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto;
-    justify-content: flex-start;
-    column-gap: 5vw;
+    padding: 1rem;
+    width:60vw;
+    height: auto;
+    display: flex;
+    flex-direction:row-reverse ;
+    justify-content: space-between;
+
 
 }
 .main__nosotros__card2{
     margin: 0 auto;
-    padding: 30px;
-    width:80vw;
-    height: 40vh;
-    display: grid;
-    grid-template-areas: 
-    "imagen texto"
-    "imagen texto"
-    ;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto;
-    justify-content: flex-start;
-    column-gap: 1vw;
+    padding: 2rem;
+    width:70vw;
+    height: auto;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+
 }
 .main__nosotros__card__img{
-    width:auto;
+    width:350px;
+    height: 250px;
     background-image: url(../imagenes/cafecover.jpg);
-    grid-area: imagen;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 .main__nosotros__card__img2{
-    width: auto;
+    width:300px;
+    height: 250px;
     background-image: url(../imagenes/cafecover.jpg);
-    grid-area: imagen;
     display: flex;
-    flex-direction:row;
     justify-content: center;
 }
 .main__nosotros__card__texto{
-    width: 30vw;
-    padding: 70px;
-    grid-area: texto;
+    width: 40vw;
+    padding: 1rem;
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bolder;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,8 +232,9 @@ iframe{
 }
 .main__nosotros__card__texto2{
     width: 50vw;
-    padding: 20px;
-    grid-area: texto;
+    padding: 1rem;
+    font-size: large;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -254,51 +245,40 @@ iframe{
 
 /*main cursos*/
 .main__cursos {
-    width: 70vw;
     margin: 0 auto;
-    padding: 5%;
-    height:100vh;
-    background-color:floralwhite;
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 5vh;
-    column-gap: 3vw;
+    width: 90vw;
+    height:100%;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+
 }
 .main__cursos__card{
     margin: 0 auto;
-    padding: 45px;
-    background-color: rgb(190, 190, 190);
-    width: 50%;
-    display: grid;
-    grid-template-areas: 
-            "titulo titulo"
-            "imagen imagen"
-            ;
-    grid-template-columns:repeat(2, 1fr);
-    grid-template-rows: auto;
+    padding: 1rem;
+    width: 45vw;
+    height: 50vh;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     column-gap: 1vw;
-    row-gap: 2vh;
 }
 
 .main__cursos__card__img{
-    margin: 0 auto;
-    background-color:rgb(248, 224, 175);
-    width: 150px;
-    height: 150px;
+    background-color:rgb(99, 96, 91);
+    width: 20vw;
+    height:35vh;
     background-image: url(../imagenes/granos-de-cafe.png);
     background-size:50px;
-    grid-area: imagen;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
 }
 
 .main__cursos__card__titulo{
-    font-size: 100%;
-    grid-area: titulo;
+    width: 20vw;
+    height: 35vh;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -378,71 +358,115 @@ iframe{
 @media screen and (max-width: 1024px) {
 
 
-    .mainInicio__carousel {
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }
-    
-    
-    .main__productos{
-        height: auto;
-        background-color:floralwhite;
-        row-gap: 10px;
-        column-gap: 10px;
-    } 
-    
-    .sectionCard{
-        margin: 0 auto;
-        padding: 45px;
-        background-color: rgb(190, 190, 190);
-        width: auto;
-        height: 40vh;
-        display: grid;
-        grid-template-areas: 
-                "titulo titulo"
-                "imagen imagen"
-                "texto texto"
-                ;
-        grid-template-columns:auto;
-        grid-template-rows: auto;
-        column-gap: 10px;
-        row-gap: 10px;
-    }
+.mainInicio__carousel {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
-    .sectionCardH3{
-        font-size: 90%;
-        grid-area: titulo;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .sectionCardImage{
-        margin: 0 auto;
-        background-color:rgb(248, 224, 175);
-        width: 150px;
-        height: 150px;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-    }
-    .sectionCardTexto{
-        width: auto;
-        height: auto;
-        font-size: 75%;
-    }
-    
-    .main__contacto__form{
-        margin-bottom: 1rem;
-    }
-    
+.main__productos{
+    width: 90vw;
+    padding: 1rem;
+    margin: 0 auto;
+    height:auto;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}   
+.sectionCard{
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: rgb(190, 190, 190);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    align-content: center;
+}
+.sectionCardImage{
+    background-color:rgb(99, 96, 91);
+    width: 150px;
+    height: 150px;
+    background-image: url(../imagenes/granos-de-cafe.png);
+    background-size:50px;
+}
+.sectionCardH3{
+    margin: 1rem;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+}
+.sectionCardTexto{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+
+}
+
+.main__contacto__form{
+    margin-bottom: 1rem;
+}
+
 
 }
 /* fin media 1024px */
 
+/* inicio media 1000px */
+@media screen and (max-width: 1000px){
+
+.main__cursos {
+    margin: 0 auto;
+    width: 90vw;
+    height:auto;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+
+}
+.main__cursos__card{
+    margin: 0 auto;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: none;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1vh;
+}
+
+.main__cursos__card__img{
+    background-color:rgb(99, 96, 91);
+    width: 50%;
+    height:35vh;
+    background-image: url(../imagenes/granos-de-cafe.png);
+    background-size:50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main__cursos__card__titulo{
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+/* fin media 1000px */
 /* inicio media 768px */
 @media screen and (max-width: 768px){
 
@@ -463,107 +487,171 @@ iframe{
 } 
 
 .main__productos{
-    height: auto;
-    background-color:floralwhite;
-    
-} 
-
-.sectionCard{
+    width: 90vw;
+    padding: 1rem;
     margin: 0 auto;
-    padding: 45px;
+    height:auto;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}   
+.sectionCard{
+    margin: 1rem auto;
+    padding: 1rem;
     background-color: rgb(190, 190, 190);
     width: auto;
-    height: auto;
-    display: grid;
-    grid-template-areas: 
-            "titulo titulo"
-            "imagen imagen"
-            "texto texto"
-            ;
-    grid-template-columns:auto;
-    grid-template-rows: auto;
-    column-gap: 10px;
-    row-gap: 10px;
-}
-
-.sectionCardH3{
-    font-size: 90%;
-    grid-area: titulo;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center ;
     align-items: center;
+    align-content: center;
 }
-
 .sectionCardImage{
-    margin: 0 auto;
-    background-color:rgb(248, 224, 175);
+    background-color:rgb(99, 96, 91);
     width: 150px;
     height: 150px;
+    background-image: url(../imagenes/granos-de-cafe.png);
+    background-size:50px;
+}
+.sectionCardH3{
+    margin: 1rem;
+    height: 5rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    flex-direction: row;
     justify-content: center;
+    align-content: center;
+
 }
 .sectionCardTexto{
-    width: auto;
+    width: 100%;
     height: auto;
-    font-size: 75%;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
 
+}
 
 
 .main__contacto__form{
     margin-bottom: 1rem;
 }
 
-
-
 .main__cursos {
-    width: auto;
     margin: 0 auto;
+    width: 90vw;
+    height:auto;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+
 }
 .main__cursos__card{
     margin: 0 auto;
-    padding: 45px;
-    background-color: rgb(190, 190, 190);
+    padding: 1rem;
     width: auto;
     height: auto;
-    display: grid;
-    grid-template-areas: 
-            "titulo titulo"
-            "imagen imagen"
-            ;
-    grid-template-columns:auto;
-    grid-template-rows: auto;
-    column-gap: 10px;
-    row-gap: 10px;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: none;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1vh;
 }
 
-
 .main__cursos__card__img{
-    margin: 0 auto;
-    background-color:rgb(248, 224, 175);
-    width: 150px;
-    height: 150px;
+    background-color:rgb(99, 96, 91);
+    width:50%;
+    height:35vh;
     background-image: url(../imagenes/granos-de-cafe.png);
     background-size:50px;
-    grid-area: imagen;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
 }
 
-
 .main__cursos__card__titulo{
-    font-size: 90%;
-    grid-area: titulo;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+
+.main__nosotros{
+    margin: 0 auto;
+    height: 100%;
+    width: 90vw;
+    background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__nosotros__card{
+    margin: 0 auto;
+    padding: 1rem;
+    width:auto;
+    height: auto;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.main__nosotros__card2{
+    margin: 0 auto;
+    padding: 2rem;
+    width:auto;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+.main__nosotros__card__img{
+    width:350px;
+    height: 250px;
+    background-image: url(../imagenes/cafecover.jpg);
+    display: flex;
+    justify-content: center;
+}
+.main__nosotros__card__img2{
+    width:300px;
+    height: 250px;
+    background-image: url(../imagenes/cafecover.jpg);
+    display: flex;
+    justify-content: center;
+}
+.main__nosotros__card__texto{
+    width: 100%;
+    padding: 1rem;
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__nosotros__card__texto2{
+    width: 100%;
+    padding: 1rem;
+    font-size: large;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
 
 .footer{
     height: 35vh;
@@ -591,192 +679,165 @@ iframe{
 @media screen and (max-width: 612px){
 
     .main__productos{
-        width: auto;
+        width: 90vw;
+        padding: 1rem;
+        margin: 0 auto;
         height:auto;
-        margin: 0 auto;
-        padding: 5%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        row-gap: 1vh;
-        column-gap:0;
-    } 
-
+        background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }   
     .sectionCard{
-        margin: 0 auto;
-        padding: 45px;
+        margin: 1rem auto;
+        padding: 1rem;
         background-color: rgb(190, 190, 190);
         width: auto;
-        height: auto;
-        display: grid;
-        grid-template-areas: 
-                "titulo"
-                "imagen"
-                "texto"
-                ;
-        grid-template-columns:auto;
-        grid-template-rows: auto;
-        column-gap: 10px;
-        row-gap: 10px;
-    }
-    
-    .sectionCardH3{
-        font-size: 90%;
-        grid-area: titulo;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:center ;
         align-items: center;
+        align-content: center;
     }
-    
     .sectionCardImage{
-        margin: 0 auto;
-        background-color:rgb(248, 224, 175);
+        background-color:rgb(99, 96, 91);
         width: 150px;
         height: 150px;
+        background-image: url(../imagenes/granos-de-cafe.png);
+        background-size:50px;
+    }
+    .sectionCardH3{
+        margin: 1rem;
+        height: 5rem;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-content: center;
+        flex-direction: row;
         justify-content: center;
+        align-content: center;
+    
     }
     .sectionCardTexto{
-        width: auto;
+        width: 100%;
         height: auto;
-        font-size: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: flex-start;
+
     }
 
     .main__nosotros{
-        grid-area: main;
-        height: auto;
+        margin: 0 auto;
+        height: 100%;
+        width: 90vw;
+        background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+    
     .main__nosotros__card{
         margin: 0 auto;
-        padding: 0px;
-        width:90vw;
+        padding: 1rem;
+        width:auto;
         height: auto;
-        display: grid;
-        grid-template-areas: 
-        "texto"
-        "imagen"
-        ;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction:column ;
         justify-content: center;
+        align-items: center;
         align-content: center;
-        column-gap: 0;
     }
     .main__nosotros__card2{
         margin: 0 auto;
-        padding: 0px;
-        width:90vw;
+        padding: 2rem;
+        width:auto;
         height: auto;
-        display: grid;
-        grid-template-areas: 
-        "texto"
-        "imagen"
-        ;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        justify-content: center;
-        align-content: center;
-        column-gap: 0;
-    }
-    
-    .main__nosotros__card__img{
-        width:50vw;
-        height: 40vh;
-        background-image: url(../imagenes/cafecover.jpg);
-        grid-area: imagen;
         display: flex;
-        flex-direction: column;
+        flex-direction:column;
         justify-content: center;
         align-items: center;
         align-content: center;
-        margin: 3% auto;
+    
+    }
+    .main__nosotros__card__img{
+        width:300px;
+        height: 200px;
+        background-image: url(../imagenes/cafecover.jpg);
+        display: flex;
+        justify-content: center;
     }
     .main__nosotros__card__img2{
-        width:50vw;
-        height: 40vh;
+        width:300px;
+        height: 200px;
         background-image: url(../imagenes/cafecover.jpg);
-        grid-area: imagen;
+        display: flex;
+        justify-content: center;
+    }
+    .main__nosotros__card__texto{
+        width: 100%;
+        padding: 1rem;
+        font-size: x-large;
+        font-style: italic;
+        font-weight: bolder;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        margin: 3% auto;
-    }
-
-    .main__nosotros__card__texto{
-        margin: 0 auto;
-        width: 50vw;
-        padding: 70px;
-        grid-area: texto;
-        display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
     }
     .main__nosotros__card__texto2{
-        margin: 0 auto;
-        width: 50vw;
-        padding: 70px;
-        grid-area: texto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .main__cursos{
-        width: auto;
-        height:auto;
-        margin: 0 auto;
-        padding: 5%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        row-gap: 1vh;
-        column-gap:0;
-    } 
-
-    .main__cursos__card{
-        margin: 0 auto;
-        padding: 45px;
-        background-color: rgb(190, 190, 190);
-        width: auto;
-        height: auto;
-        display: grid;
-        grid-template-areas: 
-                "titulo"
-                "imagen"
-                ;
-        grid-template-columns:auto;
-        grid-template-rows: auto;
-        column-gap: 10px;
-        row-gap: 10px;
-    }
-    
-    .main__cursos__card__titulo{
-        font-size: 90%;
-        grid-area: titulo;
+        width: 100%;
+        padding: 1rem;
+        font-size: large;
+        font-weight: 600;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    
+        
+    }
+    
+    .main__cursos {
+        margin: 0 auto;
+        width: 90vw;
+        height:auto;
+        background:linear-gradient(to left, rgba(218, 214, 214, 0.63), rgba(163, 163, 163, 0.63));
+    
+    }
+    .main__cursos__card{
+        margin: 0 auto;
+        padding: 1rem;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction:column;
+        flex-wrap: none;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1vh;
     }
     
     .main__cursos__card__img{
-        margin: 0 auto;
-        background-color:rgb(248, 224, 175);
-        width: 150px;
-        height: 150px;
+        background-color:rgb(99, 96, 91);
+        width:50%;
+        height:25vh;
+        background-image: url(../imagenes/granos-de-cafe.png);
+        background-size:50px;
         display: flex;
         flex-direction: column;
         align-content: center;
-        justify-content: center;
     }
-
+    
+    .main__cursos__card__titulo{
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
 
 /* fin media 612px */
@@ -786,6 +847,7 @@ iframe{
 @media screen and (max-width: 490px){
 
 .header {
+
     height:auto;
     display: flex;
     flex-direction: column;
@@ -793,7 +855,6 @@ iframe{
     align-items: center;
 }
 .header h1{
-    margin: 0;
     padding: 0;
     margin-bottom:1rem;
     width: auto;
@@ -811,6 +872,8 @@ iframe{
                     /*NAV*/
 
 .nav{
+    margin: 0 auto;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -819,12 +882,14 @@ iframe{
     align-content: center;
 }
 .nav ul {
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
     align-content: center;
-    column-gap:1vw;
 }
 .nav ul li {
     margin: 0;
@@ -844,34 +909,53 @@ iframe{
 
 .footer{
 width: auto;
-height: auto;
+height: 60vh;
 display: flex;
 flex-direction:column-reverse;
+column-gap: 5px;
 }
         
 .footer__item{
-    padding: 1rem;
-    height:auto;
-    width:auto;
+    padding: 0;
+    height:40vh;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    background-color: rgb(21, 22, 22);
 }
 .footer__item h3{
-    padding: 1rem;
-    height: auto;
-    width: auto;
+    padding: 0rem;
+    height: 10vh;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: brown;
 }
 .footer ul li{
+    margin: 0;
     font-size: 100%;
+    height: 9vh;
+    width: 100vw;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(158, 119, 119);
+
 }
 .footer ul li a{
     font-size: 100%;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 /* fin media 490px */
 } 
